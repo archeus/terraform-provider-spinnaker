@@ -19,6 +19,7 @@ type trigger struct {
 	Organization string
 	Registry     string
 	Repository   string
+	Tag          string `mapstructure:"tag"`
 }
 
 func fromClientTrigger(clientTrigger *client.Trigger) *trigger {
@@ -63,6 +64,10 @@ func (t *trigger) setResourceData(d *schema.ResourceData) error {
 			return err
 		}
 		err = d.Set("repository", t.Repository)
+		if err != nil {
+			return err
+		}
+		err = d.Set("tag", t.Tag)
 		if err != nil {
 			return err
 		}

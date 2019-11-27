@@ -7,3 +7,5 @@ require (
 	github.com/mitchellh/mapstructure v1.1.2
 	github.com/sergi/go-diff v1.0.0
 )
+
+go 1.13

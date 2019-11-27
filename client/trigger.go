@@ -20,6 +20,7 @@ type Trigger struct {
 	Organization string `json:"organization,omitempty"`
 	Registry     string `json:"registry,omitempty"`
 	Repository   string `json:"repository,omitempty"`
+	Tag          string `json:tag,omitempty`
 }
 
 // GetTrigger by ID
